@@ -1,0 +1,4 @@
+@EndUserText.label: 'servico definicao'
+define service ZSD_THS_SALES {
+  expose ZC_THS_SALES;
+}

@@ -1,0 +1,21 @@
+unmanaged implementation in class zcl_i_ths_sales unique;
+strict ( 2 );
+
+define behavior for ZI_THS_SALES alias Sales
+lock master
+authorization master ( instance )
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Orderid;
+
+  mapping for ztths_sales control zsths_sales
+    {
+      Orderid  = orderid;
+      Customer = customer;
+      Company  = company;
+      Vendor   = vendor;
+    }
+
+}
